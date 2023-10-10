@@ -1,0 +1,1485 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /user/:
+    get:
+      operationId: listUsers
+      description: ''
+      parameters:
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+  /user/auth/all/:
+    get:
+      operationId: listUsers
+      description: ''
+      parameters:
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+  /user/auth/pages/:
+    get:
+      operationId: listUsers
+      description: ''
+      parameters:
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+  /user/{id}/:
+    get:
+      operationId: retrieveUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: "A unique integer value identifying this Kullan\u0131c\u0131."
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+    put:
+      operationId: updateUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: "A unique integer value identifying this Kullan\u0131c\u0131."
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+    patch:
+      operationId: partialUpdateUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: "A unique integer value identifying this Kullan\u0131c\u0131."
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+    delete:
+      operationId: destroyUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: "A unique integer value identifying this Kullan\u0131c\u0131."
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - user
+  /user/{id}/auth/:
+    get:
+      operationId: retrieveUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: "A unique integer value identifying this Kullan\u0131c\u0131."
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+    put:
+      operationId: updateUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: "A unique integer value identifying this Kullan\u0131c\u0131."
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+    patch:
+      operationId: partialUpdateUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: "A unique integer value identifying this Kullan\u0131c\u0131."
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - user
+    delete:
+      operationId: destroyUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: "A unique integer value identifying this Kullan\u0131c\u0131."
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - user
+  /contactmessage/:
+    get:
+      operationId: listMessages
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Message'
+          description: ''
+      tags:
+      - contactmessage
+  /contactmessage/request/:
+    get:
+      operationId: listMessages
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Message'
+          description: ''
+      tags:
+      - contactmessage
+  /contactmessage/pages/:
+    get:
+      operationId: listMessages
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Message'
+          description: ''
+      tags:
+      - contactmessage
+  /contactmessage/{id}/:
+    get:
+      operationId: retrieveMessage
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this message.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+          description: ''
+      tags:
+      - contactmessage
+    put:
+      operationId: updateMessage
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this message.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Message'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Message'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+          description: ''
+      tags:
+      - contactmessage
+    patch:
+      operationId: partialUpdateMessage
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this message.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Message'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Message'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+          description: ''
+      tags:
+      - contactmessage
+    delete:
+      operationId: destroyMessage
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this message.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - contactmessage
+  /files/:
+    get:
+      operationId: listImages
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Image'
+          description: ''
+      tags:
+      - files
+  /car/visitors/{id}/:
+    get:
+      operationId: retrieveCar
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this car.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+          description: ''
+      tags:
+      - car
+  /car/visitors/all/:
+    get:
+      operationId: listCars
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Car'
+          description: ''
+      tags:
+      - car
+  /car/visitors/pages/:
+    get:
+      operationId: listCars
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Car'
+          description: ''
+      tags:
+      - car
+  /reservations/crud/:
+    get:
+      operationId: listReservations
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+    post:
+      operationId: createReservation
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /reservations/crud/{id}/:
+    get:
+      operationId: retrieveReservation
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this reservation.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+    put:
+      operationId: updateReservation
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this reservation.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+    patch:
+      operationId: partialUpdateReservation
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this reservation.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+    delete:
+      operationId: destroyReservation
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this reservation.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - reservations
+  /reservations/auth/:
+    get:
+      operationId: listReservationAvailabilitys
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - reservations
+  /reservations/{id}/auth/:
+    get:
+      operationId: retrieveReservation
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /reservations/{id}/admin/:
+    get:
+      operationId: retrieveReservation
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /reservations/admin/all:
+    get:
+      operationId: listReservations
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /reservations/auth/all:
+    get:
+      operationId: listReservations
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /reservations/admin/auth/all:
+    get:
+      operationId: listReservations
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /reservations/admin/all/pages/:
+    get:
+      operationId: listReservations
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /excel/download/users/:
+    get:
+      operationId: listexport_excel_users
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - excel
+  /excel/download/cars/:
+    get:
+      operationId: listexport_excel_cars
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - excel
+  /excel/download/reservations/:
+    get:
+      operationId: listexport_excel_reservations
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - excel
+  /swagger-docs/:
+    get:
+      operationId: listSwaggerSchemas
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/coreapi+json:
+              schema:
+                type: array
+                items: {}
+            application/openapi+json:
+              schema:
+                type: array
+                items: {}
+            text/html:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - swagger-docs
+  /register/:
+    post:
+      operationId: createUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Register'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Register'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Register'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Register'
+          description: ''
+      tags:
+      - register
+  /login/:
+    post:
+      operationId: createCustomLogin
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomLogin'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CustomLogin'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CustomLogin'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomLogin'
+          description: ''
+      tags:
+      - login
+  /contactmessage/visitors/:
+    post:
+      operationId: createMessage
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Message'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Message'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+          description: ''
+      tags:
+      - contactmessage
+  /files/upload/:
+    post:
+      operationId: createImage
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Image'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Image'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Image'
+          description: ''
+      tags:
+      - files
+  /car/admin/{imageId}/add/:
+    post:
+      operationId: createCar
+      description: ''
+      parameters:
+      - name: imageId
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Car'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Car'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Car'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+          description: ''
+      tags:
+      - car
+  /reservations/add/auth:
+    post:
+      operationId: createReservation
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /reservations/add/:
+    post:
+      operationId: createReservation
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /user/auth/:
+    put:
+      operationId: updateChangePassword
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChangePassword'
+          description: ''
+      tags:
+      - user
+    patch:
+      operationId: partialUpdateChangePassword
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChangePassword'
+          description: ''
+      tags:
+      - user
+  /car/admin/auth/:
+    put:
+      operationId: updateCar
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Car'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Car'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Car'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+          description: ''
+      tags:
+      - car
+    patch:
+      operationId: partialUpdateCar
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Car'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Car'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Car'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+          description: ''
+      tags:
+      - car
+  /reservations/admin/auth:
+    put:
+      operationId: updateReservation
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+    patch:
+      operationId: partialUpdateReservation
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+          description: ''
+      tags:
+      - reservations
+  /files/{image_id}/:
+    delete:
+      operationId: destroydelete_file
+      description: ''
+      parameters:
+      - name: image_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - files
+  /car/admin/{id}/auth/:
+    delete:
+      operationId: destroyCar
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this car.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - car
+  /reservations/admin/{id}/auth:
+    delete:
+      operationId: destroyReservation
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this reservation.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - reservations
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        firstName:
+          type: string
+          maxLength: 50
+        lastName:
+          type: string
+          maxLength: 50
+        address:
+          type: string
+          maxLength: 200
+        zipCode:
+          type: string
+          maxLength: 7
+        phoneNumber:
+          type: string
+          pattern: ^\(\d{3}\) \d{3}-\d{4}$
+          maxLength: 17
+        builtIn:
+          type: boolean
+        roles:
+          type: array
+          items:
+            type: string
+        email:
+          type: string
+          format: email
+          maxLength: 254
+      required:
+      - firstName
+      - lastName
+      - address
+      - zipCode
+      - phoneNumber
+      - email
+    Message:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 50
+        subjects:
+          type: string
+          maxLength: 50
+        body:
+          type: string
+          maxLength: 200
+        email:
+          type: string
+          format: email
+          maxLength: 254
+      required:
+      - name
+      - subjects
+      - body
+      - email
+    Image:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          nullable: true
+          maxLength: 100
+        url:
+          type: string
+          readOnly: true
+        type:
+          type: string
+          nullable: true
+          maxLength: 100
+        size:
+          type: integer
+          nullable: true
+        image:
+          type: string
+          format: binary
+      required:
+      - image
+    Car:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: array
+          items:
+            type: string
+        model:
+          type: string
+          maxLength: 100
+        doors:
+          type: integer
+        seats:
+          type: integer
+        luggage:
+          type: integer
+        transmission:
+          enum:
+          - a
+          - m
+          - t
+          type: string
+        airConditioning:
+          type: boolean
+        age:
+          type: integer
+        pricePerHour:
+          type: string
+          format: decimal
+          multipleOf: 0.01
+          maximum: 1000000
+          minimum: -1000000
+        fuelType:
+          enum:
+          - e
+          - h
+          - g
+          - d
+          - hy
+          - l
+          - c
+          type: string
+        builtIn:
+          type: boolean
+      required:
+      - model
+      - doors
+      - seats
+      - luggage
+      - transmission
+      - airConditioning
+      - age
+      - pricePerHour
+      - fuelType
+    Reservation:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        car:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            image:
+              type: array
+              items:
+                type: string
+            model:
+              type: string
+              maxLength: 100
+            doors:
+              type: integer
+            seats:
+              type: integer
+            luggage:
+              type: integer
+            transmission:
+              enum:
+              - a
+              - m
+              - t
+              type: string
+            airConditioning:
+              type: boolean
+            age:
+              type: integer
+            pricePerHour:
+              type: string
+              format: decimal
+              multipleOf: 0.01
+              maximum: 1000000
+              minimum: -1000000
+            fuelType:
+              enum:
+              - e
+              - h
+              - g
+              - d
+              - hy
+              - l
+              - c
+              type: string
+            builtIn:
+              type: boolean
+          required:
+          - model
+          - doors
+          - seats
+          - luggage
+          - transmission
+          - airConditioning
+          - age
+          - pricePerHour
+          - fuelType
+          readOnly: true
+        pickUpTime:
+          type: string
+          format: date-time
+        dropOffTime:
+          type: string
+          format: date-time
+        car_id:
+          type: integer
+        user_id:
+          type: integer
+        pickUpLocation:
+          type: string
+          maxLength: 150
+        dropOffLocation:
+          type: string
+          maxLength: 150
+        status:
+          type: string
+          readOnly: true
+        totalPrice:
+          type: string
+          format: decimal
+          multipleOf: 0.01
+          maximum: 1000000000000000000
+          minimum: -1000000000000000000
+          readOnly: true
+        userId:
+          type: string
+          readOnly: true
+      required:
+      - car_id
+      - user_id
+      - pickUpLocation
+      - dropOffLocation
+    Register:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        firstName:
+          type: string
+          maxLength: 50
+        lastName:
+          type: string
+          maxLength: 50
+        password:
+          type: string
+          writeOnly: true
+        confirmPassword:
+          type: string
+          writeOnly: true
+        address:
+          type: string
+          maxLength: 200
+        zipCode:
+          type: string
+          maxLength: 7
+        phoneNumber:
+          type: string
+          pattern: ^\(\d{3}\) \d{3}-\d{4}$
+          maxLength: 17
+        builtIn:
+          type: boolean
+        roles:
+          type: string
+          maxLength: 100
+        email:
+          type: string
+          format: email
+      required:
+      - firstName
+      - lastName
+      - password
+      - confirmPassword
+      - address
+      - zipCode
+      - phoneNumber
+      - roles
+      - email
+    CustomLogin:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+      required:
+      - email
+      - password
+    ChangePassword:
+      type: object
+      properties:
+        old_password:
+          type: string
+          writeOnly: true
+        password:
+          type: string
+          writeOnly: true
+        confirmPassword:
+          type: string
+          writeOnly: true
+      required:
+      - old_password
+      - password
+      - confirmPassword
